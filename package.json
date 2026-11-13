@@ -1,0 +1,22 @@
+{
+  "name": "taxguard-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TaxGuard AI - billing management and income-tax fraud-risk detection (educational MERN project)",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "test": "npm test --prefix server && npm test --prefix client",
+    "test:server": "npm test --prefix server",
+    "test:client": "npm test --prefix client",
+    "seed": "npm run seed --prefix server",
+    "create-admin": "npm run create-admin --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": { "node": ">=18.17" },
+  "license": "ISC"
+}
